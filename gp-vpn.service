@@ -1,0 +1,11 @@
+[Unit]
+Description=Start up GP VPN
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/usr/local/bin/vpn-start
+
+[Install]
+WantedBy=multi-user.target
