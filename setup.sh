@@ -4,6 +4,12 @@ wget https://github.com/yuezk/GlobalProtect-openconnect/releases/download/v2.3.7
 # Then install git (for easy updating) and the pacakge
 sudo apt install git ./globalprotect-openconnect_2.3.7-1_arm64.deb
 
+# Create local repository
+git init
+
+# Set up remote to pull from
+git remote add origin https://github.com/lumen-novum/globalprotect-VM.git
+
 # Remove installed .deb file
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
 
