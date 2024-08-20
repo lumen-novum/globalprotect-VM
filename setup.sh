@@ -9,6 +9,7 @@ git init
 
 # Set up remote to pull from
 git remote add origin https://github.com/lumen-novum/globalprotect-VM.git
+git branch --set-upsteam-to=origin/main main
 
 # Remove installed .deb file
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
