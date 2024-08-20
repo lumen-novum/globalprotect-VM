@@ -5,24 +5,24 @@ wget https://github.com/yuezk/GlobalProtect-openconnect/releases/download/v2.3.7
 sudo apt install git ./globalprotect-openconnect_2.3.7-1_arm64.deb
 
 # Create local repository
-git init
+git init -b main
 
 # Set up remote to pull from
-git branch -m main
 git remote add origin https://github.com/lumen-novum/globalprotect-VM.git
-git branch -u origin/main
+git branch --set-upstream-to origin/main
 
 # Remove installed .deb file
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
 
-# Remove linked file in case it's already there
-rm $HOME/Desktop/start-vpn.sh 2> /dev/null
+# Copy startup script to bin
+cp start.sh /usr/local/bin/start-vpn
 
-# Link starting script to desktop
-ln -s $PWD/start.sh $HOME/Desktop/start-vpn.sh
+# Create systemd service
+cp gp-vpn.service /etc/systemd/system/
 
 # Allow file to be executed
-chmod +x $HOME/Desktop/start-vpn.sh
+chmod +x /usr/local/bin/start-vpn
 
-# Run at startup
-sudo echo "$HOME/Desktop/start-vpn.sh" >> /etc/rc.local
+# Start and enable systemctl service
+sudo systemctl enable gp-vpn
+sudo systemctl start gp-vpn
