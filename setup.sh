@@ -13,6 +13,9 @@ git remote add origin https://github.com/lumen-novum/globalprotect-VM.git
 # Remove installed .deb file
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
 
+# Remove linked file in case it's already there
+rm $HOME/Desktop/start-vpn.sh 2> /dev/null
+
 # Link starting script to desktop
 ln -s $PWD/start.sh $HOME/Desktop/start-vpn.sh
 
