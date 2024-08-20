@@ -14,7 +14,7 @@ git remote add origin https://github.com/lumen-novum/globalprotect-VM.git
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
 
 # Link starting script to desktop
-ln -s start.sh $HOME/Desktop/start-vpn.sh
+ln -s $PWD/start.sh $HOME/Desktop/start-vpn.sh
 
 # Allow file to be executed
 chmod +x $HOME/Desktop/start-vpn.sh
