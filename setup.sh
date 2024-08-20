@@ -20,7 +20,7 @@ sudo cp start.sh /usr/local/bin/start-vpn
 sudo cp gp-vpn.service /etc/systemd/system/
 
 # Allow file to be executed
-chmod +x /usr/local/bin/start-vpn
+sudo chmod +x /usr/local/bin/start-vpn
 
 # Start and enable systemctl service
 sudo systemctl enable gp-vpn
