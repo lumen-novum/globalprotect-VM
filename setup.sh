@@ -15,10 +15,10 @@ git branch --set-upstream-to origin/main
 rm globalprotect-openconnect_2.3.7-1_arm64.deb
 
 # Copy startup script to bin
-cp start.sh /usr/local/bin/start-vpn
+sudo cp start.sh /usr/local/bin/start-vpn
 
 # Create systemd service
-cp gp-vpn.service /etc/systemd/system/
+sudo cp gp-vpn.service /etc/systemd/system/
 
 # Allow file to be executed
 chmod +x /usr/local/bin/start-vpn
