@@ -13,4 +13,8 @@ sudo cp start.sh /usr/local/bin/start-vpn
 # Allow file to be executed
 sudo chmod +x /usr/local/bin/start-vpn
 
+mv $HOME/.probak $HOME/.profile 2> /dev/null
+
+sudo cp $HOME/.profile $HOME/.probak
+
 sudo echo "/usr/bin/local/start-vpn" >> $HOME/.profile
