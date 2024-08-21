@@ -1,4 +1,2 @@
 #!/bin/bash
-su caysen 
-gpclient connect --browser firefox utdvpn.utdallas.edu
-#xfce4-terminal -e 'bash -c "sleep 30"'
+xfce4-terminal -e 'su caysen -c "gpclient connect --browser default utdvpn.utdallas.edu"'
