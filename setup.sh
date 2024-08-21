@@ -13,4 +13,4 @@ sudo cp start.sh /usr/local/bin/start-vpn
 # Allow file to be executed
 sudo chmod +x /usr/local/bin/start-vpn
 
-sudo echo "start-vpn" >> $HOME/.profile
+sudo echo "/usr/bin/local/start-vpn" >> $HOME/.profile
