@@ -1,2 +1,2 @@
 #!/bin/bash
-gpclient connect --browser default utdvpn.utdallas.edu
+gpclient connect --browser chromium utdvpn.utdallas.edu
